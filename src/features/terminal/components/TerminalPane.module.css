@@ -1,0 +1,24 @@
+.terminalPane {
+  width: auto;
+  height: auto;
+  min-height: 0;
+  position: absolute;
+  inset: 10px 12px 0 12px;
+  background: #0c0c0c;
+}
+
+.active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.inactive {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}

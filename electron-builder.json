@@ -1,0 +1,75 @@
+{
+  "appId": "com.mergecodecli.app",
+  "productName": "MergeCodeCli",
+  "executableName": "MergeCodeCli",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "package.json",
+    {
+      "from": "dist",
+      "to": "dist",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "src",
+      "to": "src",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "!**/*.map",
+    "!**/*.d.ts",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/__tests__/**"
+  ],
+  "extraResources": [
+    {
+      "from": "build/cli-runtime",
+      "to": "cli-runtime",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ],
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "icon": "src/electron/assets/icons/mac/app.icns",
+    "category": "public.app-category.developer-tools",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false,
+    "entitlements": "build/entitlements.mac.plist",
+    "entitlementsInherit": "build/entitlements.mac.plist"
+  },
+  "dmg": {
+    "sign": false
+  },
+  "afterSign": "scripts/notarize.js",
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "src/electron/assets/icons/win/app.ico",
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": true
+  },
+  "asarUnpack": [
+    "node_modules/better-sqlite3/**",
+    "node_modules/bindings/**",
+    "node_modules/file-uri-to-path/**",
+    "node_modules/prebuild-install/**",
+    "node_modules/node-pty/**"
+  ],
+  "asar": true
+}

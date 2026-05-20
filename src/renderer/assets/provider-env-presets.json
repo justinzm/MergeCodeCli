@@ -1,0 +1,87 @@
+{
+  "claude": {
+    "profiles": [
+      {
+        "id": "kimi-code-plan",
+        "name": "Kimi Code Plan",
+        "envVars": [
+          { "key": "ANTHROPIC_API_KEY", "value": null },
+          { "key": "ANTHROPIC_MODEL", "value": "kimi-for-coding" },
+          { "key": "ANTHROPIC_BASE_URL", "value": "https://api.kimi.com/coding/" }
+        ]
+      },
+      {
+        "id": "minimax-code-plan",
+        "name": "MiniMax Code Plan",
+        "envVars": [
+          { "key": "ANTHROPIC_AUTH_TOKEN", "value": null },
+          { "key": "ANTHROPIC_BASE_URL", "value": "https://api.minimaxi.com/anthropic" },
+          { "key": "ANTHROPIC_MODEL", "value": "MiniMax-M2.5" }
+        ]
+      },
+      {
+        "id": "deepseek-api",
+        "name": "DeepSeek API",
+        "envVars": [
+          { "key": "ANTHROPIC_API_KEY", "value": null },
+          { "key": "ANTHROPIC_BASE_URL", "value": "https://api.deepseek.com/anthropic" },
+          { "key": "ANTHROPIC_MODEL", "value": "deepseek-v4-pro" },
+          { "key": "ANTHROPIC_DEFAULT_OPUS_MODEL", "value": "deepseek-v4-pro" },
+          { "key": "ANTHROPIC_DEFAULT_SONNET_MODEL", "value": "deepseek-v4-pro" },
+          { "key": "ANTHROPIC_DEFAULT_HAIKU_MODEL", "value": "deepseek-v4-flash" },
+          { "key": "CLAUDE_CODE_SUBAGENT_MODEL", "value": "deepseek-v4-flash" },
+          { "key": "CLAUDE_CODE_EFFORT_LEVEL", "value": "max" }
+        ]
+      },
+      {
+        "id": "oauth-login",
+        "name": "OAuth 登录",
+        "envVars": [
+          { "key": "MERGECODECLI_AUTH_MODE", "value": "oauth" }
+        ]
+      }
+    ]
+  },
+  "codex": {
+    "profiles": [
+      {
+        "id": "openai-api-key",
+        "name": "OpenAI API Key",
+        "envVars": [
+          { "key": "OPENAI_API_KEY", "value": null },
+          { "key": "OPENAI_BASE_URL", "value": "https://api.openai.com" },
+          { "key": "OPENAI_MODEL", "value": null }
+        ]
+      },
+      {
+        "id": "oauth-login",
+        "name": "OAuth 登录",
+        "envVars": [
+          { "key": "MERGECODECLI_AUTH_MODE", "value": "oauth" },
+          { "key": "OPENAI_BASE_URL", "value": "https://api.openai.com" }
+        ]
+      }
+    ]
+  },
+  "gemini": {
+    "profiles": [
+      {
+        "id": "api-key",
+        "name": "API Key",
+        "envVars": [
+          { "key": "GOOGLE_GEMINI_BASE_URL", "value": null },
+          { "key": "GEMINI_API_KEY", "value": null },
+          { "key": "GEMINI_MODEL", "value": null },
+          { "key": "HTTP_PROXY", "value": null }
+        ]
+      },
+      {
+        "id": "oauth-login",
+        "name": "OAuth 登录",
+        "envVars": [
+          { "key": "MERGECODECLI_AUTH_MODE", "value": "oauth" }
+        ]
+      }
+    ]
+  }
+}
